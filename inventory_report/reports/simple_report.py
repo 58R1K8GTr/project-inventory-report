@@ -30,10 +30,10 @@ class SimpleReport:
                 else:
                     companies_inventory[product.company_name] = 1
         company_largest_inventory = max(
-            companies_inventory.items(), key=lambda x: x[1])
+            companies_inventory.items(), key=lambda x: x[1])[0]
         return (
             f"Oldest manufacturing date: {oldest_manu_date.date()}\n"
             f"Closest expiration date: {closest_exp_date.date()}\n"
-            "Company with the largest"
+            "Company with the largest "
             f"inventory: {company_largest_inventory}\n"
         )
