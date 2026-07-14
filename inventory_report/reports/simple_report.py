@@ -12,18 +12,18 @@ class SimpleReport:
 
     def generate(self) -> str:
         now = datetime.now()
-        oldest_manu_date = now
-        closest_exp_date = datetime(year=1700)
-        companies_inventory = {}
+        oldest_manu_date = datetime.max
+        closest_exp_date = datetime.max
+        companies_inventory: dict[str, int] = {}
         for inventory in self._data:
-            for product in inventory.data():
+            for product in inventory.data:
                 manu_date = datetime.strptime(
                     product.manufacturing_date, '%Y-%m-%d')
                 expiration_date = datetime.strptime(
                     product.expiration_date, '%Y-%m-%d')
-                if min([manu_date, oldest_manu_date]):
+                if manu_date < oldest_manu_date:
                     oldest_manu_date = manu_date
-                if now > expiration_date > closest_exp_date:
+                if now < expiration_date < closest_exp_date:
                     closest_exp_date = expiration_date
                 if product.company_name in companies_inventory:
                     companies_inventory[product.company_name] += 1
