@@ -11,15 +11,6 @@ def test_create_product() -> None:
         '1', 'skyline GTr 34', 'Nissan', str(created), str(expired), '123',
         'instruções de armazenamento.'
     )
-    # expected = (
-    #     "The product 1 - skyline GTr 34 "
-    #     "with serial number 123 "
-    #     f"manufactured on {str(expired)} "
-    #     "by the company Nissan "
-    #     f"valid until {str(expired)} "
-    #     "must be stored according to the following instructions: "
-    #     "instruções de armazenamento."
-    # )
     assert product.id == '1'
     assert product.company_name == 'Nissan'
     assert product.product_name == 'skyline GTr 34'
