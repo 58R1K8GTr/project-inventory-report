@@ -1,8 +1,17 @@
+from abc import ABC, abstractmethod
 from typing import Dict, Type
 
+from .product import Product
 
-class Importer:
-    pass
+
+class Importer(ABC):
+    @abstractmethod
+    def __init__(self, path: str) -> None:
+        pass
+
+    @abstractmethod
+    def import_data(self) -> list[Product]:
+        pass
 
 
 class JsonImporter:
