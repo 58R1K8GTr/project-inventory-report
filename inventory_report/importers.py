@@ -6,7 +6,6 @@ from .product import Product
 
 
 class Importer(ABC):
-    @abstractmethod
     def __init__(self, path: str) -> None:
         pass
 
