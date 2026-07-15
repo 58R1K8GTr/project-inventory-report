@@ -5,6 +5,8 @@ from inventory_report.inventory import Inventory
 
 class SimpleReport:
     def __init__(self) -> None:
+        # colocando um comentário para enviar o teste novamente pois o actions
+        # deu erro.
         self._data: list[Inventory] = []
 
     def add_inventory(self, inventory: Inventory) -> None:
