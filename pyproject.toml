@@ -48,7 +48,7 @@ disable_error_code = "misc"
 
 [project.optional-dependencies]
 test = [
-    "wheel==0.40.0",
+    "wheel==0.46.2",
     "factory-boy==3.2.1",
     "Faker==18.9.0",
     "pytest==9.0.3",
