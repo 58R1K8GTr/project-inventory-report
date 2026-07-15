@@ -23,7 +23,7 @@ pyflakes==3.0.1
 pytest-cov==4.1.0
 pytest-dependency@git+https://github.com/betrybe/pytest-dependency@984f9d7d083870d091e8862a9b9c33fdf815b8d9
 pytest-json==0.4.0
-pytest==7.3.1
+pytest==9.0.3
 python-dateutil==2.8.2
 rich==13.4.2
 shellingham==1.5.0.post1
