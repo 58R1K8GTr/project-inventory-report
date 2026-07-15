@@ -5,7 +5,7 @@ from inventory_report.inventory import Inventory
 
 class SimpleReport:
     def __init__(self) -> None:
-        self._data = []
+        self._data: list[Inventory] = []
 
     def add_inventory(self, inventory: Inventory) -> None:
         self._data.append(inventory)
