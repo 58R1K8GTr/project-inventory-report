@@ -67,9 +67,7 @@ pip install -r dev-requirements.txt
 ### Interface de linha de comando:
 
 | Flag | Argumento |
-
 | --- | --- |
-
 | `-p` | caminho/da/pasta/com/arquivos |
 | `-t` | `simple` - `complete` |
 
